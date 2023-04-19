@@ -1,0 +1,38 @@
+body { 
+	background-color: #29465b;
+}
+ 
+.navbar-custom {
+	background-color: #D3D3D3;
+}
+
+.rounded-border {
+	border-radius: 10px;
+}
+
+.img-size {
+	height:450px;
+	width: 800px;
+	border: solid black 5px;
+}
+
+.align {
+	margin-left:250px;
+}
+
+.padding-left{
+	margin-left:10px;
+}
+
+.copyright {
+	position: absolute;
+	margin: auto;
+  	bottom: 10px;
+  	width: 100%;
+  	text-align: center;
+  	color: white;
+}
+
+li {
+	color: white;
+}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+  {% block content %}
+
+    <div class="container">
+      <div class="align">
+        <form method="post" enctype="multipart/form-data" class="mt-5">
+          {% csrf_token %}
+          {{ form.image}}
+          <button type="submit" class="rounded-border value={{execute_ts}}">Upload</button>
+        </form>
+      </div>
+      <center>
+        {% if img_obj %}
+          <h3 class="text-white mt-4" id="result-text">{{description}} <button onclick="myFunction()"><i class="fa fa-volume-up" style="font-size:36px"></i> </button></h3>
+          <img class="rounded img-size mt-2" src="{{ img_obj.image.url}}" alt="connect">
+        {% endif %}
+      </center>
+    </div>
+
+    <script>
+    function myFunction() {
+      var msg = new SpeechSynthesisUtterance();
+      msg.text = document.getElementById("result-text").innerHTML
+      window.speechSynthesis.speak(msg);
+    }
+    </script>
+
+  {% endblock content %}
